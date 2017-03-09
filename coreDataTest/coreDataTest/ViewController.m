@@ -24,9 +24,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setUpBtn];
-    
-    
-    NSLog(@"test");
 }
 
 /** 
