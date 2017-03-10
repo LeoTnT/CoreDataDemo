@@ -12,11 +12,6 @@
 
 @interface ViewController ()
 
-/** 
- 管理对象上下文 
- */
-@property (nonatomic, strong)  NSManagedObjectContext *managedObjectContext;
-
 @end
 
 @implementation ViewController
@@ -24,15 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setUpBtn];
-    
-    
-    NSLog(@"test");
 }
 
 /** 
  插入数据
  */
-- (void)clickBtn1
+- (void)clickInsertBtn
 {
     LCCoreDataManager *coreDataManager = [LCCoreDataManager shareInstanceWithStoreName:@"Person"];
     
@@ -48,7 +40,7 @@
 /** 
  删除数据 
  */
-- (void)clickBtn2
+- (void)clickDeleteBtn
 {
     LCCoreDataManager *coreDataManager = [LCCoreDataManager shareInstanceWithStoreName:@"Person"];
     
@@ -61,7 +53,7 @@
 /** 
  修改数据 
  */
-- (void)clickBtn3
+- (void)clickChangeBtn
 {
     LCCoreDataManager *coreDataManager = [LCCoreDataManager shareInstanceWithStoreName:@"Person"];
     
@@ -80,7 +72,7 @@
 /**
  查询数据
  */
-- (void)clickBtn4
+- (void)clickSearchBtn
 {
     LCCoreDataManager *coreDataManager = [LCCoreDataManager shareInstanceWithStoreName:@"Person"];
     
@@ -100,33 +92,33 @@
 
 - (void)setUpBtn
 {
-    UIButton *btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn1.backgroundColor = [UIColor redColor];
-    btn1.frame = CGRectMake(100, 100, 150, 30);
-    [btn1 setTitle:@"插入数据" forState:UIControlStateNormal];
-    [btn1 addTarget:self action:@selector(clickBtn1) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn1];
+    UIButton *insertBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    insertBtn.backgroundColor = [UIColor redColor];
+    insertBtn.frame = CGRectMake(100, 100, 150, 30);
+    [insertBtn setTitle:@"插入数据" forState:UIControlStateNormal];
+    [insertBtn addTarget:self action:@selector(clickInsertBtn) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:insertBtn];
     
-    UIButton *btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn2.backgroundColor = [UIColor redColor];
-    btn2.frame = CGRectMake(100, 200, 150, 30);
-    [btn2 setTitle:@"删除数据" forState:UIControlStateNormal];
-    [btn2 addTarget:self action:@selector(clickBtn2) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn2];
+    UIButton *deleteBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    deleteBtn.backgroundColor = [UIColor redColor];
+    deleteBtn.frame = CGRectMake(100, 200, 150, 30);
+    [deleteBtn setTitle:@"删除数据" forState:UIControlStateNormal];
+    [deleteBtn addTarget:self action:@selector(clickDeleteBtn) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:deleteBtn];
     
-    UIButton *btn3 = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn3.backgroundColor = [UIColor redColor];
-    btn3.frame = CGRectMake(100, 300, 150, 30);
-    [btn3 setTitle:@"修改数据" forState:UIControlStateNormal];
-    [btn3 addTarget:self action:@selector(clickBtn3) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn3];
+    UIButton *changeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    changeBtn.backgroundColor = [UIColor redColor];
+    changeBtn.frame = CGRectMake(100, 300, 150, 30);
+    [changeBtn setTitle:@"修改数据" forState:UIControlStateNormal];
+    [changeBtn addTarget:self action:@selector(clickChangeBtn) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:changeBtn];
     
-    UIButton *btn4 = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn4.backgroundColor = [UIColor redColor];
-    btn4.frame = CGRectMake(100, 400, 150, 30);
-    [btn4 setTitle:@"查询数据" forState:UIControlStateNormal];
-    [btn4 addTarget:self action:@selector(clickBtn4) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn4];
+    UIButton *searchBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    searchBtn.backgroundColor = [UIColor redColor];
+    searchBtn.frame = CGRectMake(100, 400, 150, 30);
+    [searchBtn setTitle:@"查询数据" forState:UIControlStateNormal];
+    [searchBtn addTarget:self action:@selector(clickSearchBtn) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:searchBtn];
 }
 
 
