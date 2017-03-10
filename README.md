@@ -6,8 +6,8 @@ Making use of this code demo to use Core Data be convenient.
 我们要在自己的控制器里面调用上述的几个接口, 对数据进行增删改查,
 
 首先要引入模型类和管理类
-    #import "Person+CoreDataClass.h"
-    #import "LCCoreDataManager.h"
+    `#import "Person+CoreDataClass.h"`
+    `#import "LCCoreDataManager.h"`
 
 
 然后把我们刚才写好的管理类以及模型文件进行初始化
