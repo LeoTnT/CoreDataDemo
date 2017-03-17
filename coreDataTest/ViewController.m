@@ -84,7 +84,7 @@
     NSLog(@"%ld", PersonArr.count);
     
     for (Person *personM in PersonArr) {
-        NSLog(@"%@=%d=%d", personM.name,personM.age, personM.height);
+        NSLog(@"name=%@  age=%d  height=%d", personM.name,personM.age, personM.height);
     }
     
 }
