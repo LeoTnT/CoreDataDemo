@@ -1,4 +1,5 @@
 # CoreDataDemo
+(CoreData的封装管理类,以及使用方法)
 Making use of this code demo to use Core Data be convenient.
 
 
